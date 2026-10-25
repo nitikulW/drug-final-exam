@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="th" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>553103-168 ความรู้พื้นฐานเรื่องยา · สรุปแยกบทและจำลองข้อสอบปลายภาค</title>
+<script>try{const theme=localStorage.getItem('drug-study-theme');if(theme==='light'||theme==='dark')document.documentElement.dataset.theme=theme}catch(e){}</script>
+<style>
+:root{
+  color-scheme:light;
+  --paper:#ffffff;
+  --ink:#22332b;
+  --muted:#516358;
+  --line:#d3ddd4;
+  --accent:#1f5c43;
+  --ground:#eff3ec;
+  --wrong:#922f26;
+  --wrong-bg:#fdf0ee;
+  --selected:#e3efe5;
+  --on-accent:#ffffff;
+  --selection:#c9e4ce;
+  --focus:#b36b13;
+  --star-ink:#7c4700;
+  --star-bg:#fff4d6;
+  --star-line:#e8c574;
+  --card:#f8faf7;
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#141b18;
+  --ink:#e6efe9;
+  --muted:#aec0b4;
+  --line:#384a40;
+  --accent:#8fd4ab;
+  --ground:#1e2a23;
+  --wrong:#ffaba0;
+  --wrong-bg:#331c1a;
+  --selected:#274032;
+  --on-accent:#0e2618;
+  --selection:#365c43;
+  --focus:#f3c36d;
+  --star-ink:#ffd670;
+  --star-bg:#2e2512;
+  --star-line:#6b531c;
+  --card:#19231e;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:17px/1.85 Tahoma,"Leelawadee UI",sans-serif;
+}
+::selection{background:var(--selection);color:var(--ink)}
+a{color:var(--accent);text-underline-offset:4px}
+button,input,select{font:inherit;accent-color:var(--accent)}
+button{
+  cursor:pointer;
+  background:var(--paper);
+  color:var(--ink);
+  border:1px solid var(--line);
+  padding:9px 16px;
+  border-radius:7px;
+  line-height:1.5;
+}
+button:hover{background:var(--ground);color:var(--ink)}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{
+  outline:3px solid var(--focus);
+  outline-offset:3px;
+}
+button:disabled{opacity:.5;cursor:default}
+button[aria-pressed="true"],.primary{
+  background:var(--accent);
+  color:var(--on-accent);
+  border-color:var(--accent);
+  font-weight:bold;
+}
+button[aria-pressed="true"]:hover,.primary:hover{
+  background:var(--accent);
+  color:var(--on-accent);
+  opacity:.92;
+}
+header{
+  padding:24px 4vw;
+  border-bottom:1px solid var(--line);
+  background:var(--ground);
+}
+.header-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+  flex-wrap:wrap;
+  max-width:1460px;
+  margin:auto;
+}
+header h1{
+  font-size:clamp(22px,2.8vw,32px);
+  margin:0;
+  line-height:1.45;
+}
+header p{
+  margin:6px 0 0;
+  color:var(--muted);
+  font-size:15px;
+}
+.blueprint-bar{
+  max-width:1460px;
+  margin:16px auto 0;
+  padding:12px 16px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:8px;
+  font-size:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 22px;
+  align-items:center;
+}
+.blueprint-bar strong{color:var(--accent)}
+.layout{
+  display:grid;
+  grid-template-columns:285px minmax(0,1fr);
+  max-width:1520px;
+  margin:auto;
+}
+aside{
+  padding:24px 18px;
+  align-self:start;
+  position:sticky;
+  top:0;
+  max-height:100vh;
+  overflow:auto;
+}
+aside h2{
+  font-size:16px;
+  margin:0 0 12px;
+  letter-spacing:.01em;
+}
+.nav-group-label{
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:14px 0 6px;
+  padding:0 6px;
+}
+nav{display:grid;gap:5px}
+nav button{
+  text-align:left;
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:11px 12px;
+  font-size:15px;
+  background:var(--paper);
+}
+nav button[aria-current="true"]{
+  background:var(--accent);
+  color:var(--on-accent);
+  border-color:var(--accent);
+}
+nav small{
+  display:block;
+  opacity:.86;
+  font-size:13px;
+  margin-top:2px;
+}
+.exam-nav-btn{
+  border-color:var(--star-line);
+  background:var(--star-bg);
+  color:var(--star-ink);
+}
+main{
+  border-left:1px solid var(--line);
+  padding:28px clamp(18px,4.5vw,72px) 70px;
+  min-width:0;
+}
+.toolbar{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:22px;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--line);
+}
+.toolbar a{
+  padding:7px 12px;
+  border:1px solid var(--line);
+  border-radius:7px;
+  text-decoration:none;
+  background:var(--ground);
+  font-size:15px;
+}
+.toolbar a:hover{border-color:var(--accent)}
+.star-legend{
+  font-size:14px;
+  background:var(--star-bg);
+  color:var(--star-ink);
+  border:1px solid var(--star-line);
+  padding:12px 16px;
+  border-radius:8px;
+  margin:0 0 24px;
+}
+.star-badge{
+  display:inline-block;
+  font-size:13px;
+  font-weight:bold;
+  padding:2px 9px;
+  border-radius:99px;
+  background:var(--star-bg);
+  color:var(--star-ink);
+  border:1px solid var(--star-line);
+  margin-right:6px;
+  vertical-align:middle;
+}
+article,#quiz{
+  max-width:78ch;
+  margin:auto;
+}
+article h1{
+  font-size:clamp(24px,2.5vw,30px);
+  line-height:1.5;
+  margin:0 0 20px;
+}
+article h2{
+  font-size:22px;
+  margin:38px 0 14px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line);
+}
+article h3{
+  font-size:19px;
+  margin:28px 0 10px;
+  color:var(--accent);
+}
+article h4{
+  font-size:17px;
+  margin:22px 0 8px;
+}
+p{margin:11px 0}
+blockquote{
+  margin:14px 0;
+  padding:14px 18px;
+  background:var(--star-bg);
+  border-left:4px solid var(--star-line);
+  color:var(--ink);
+  border-radius:0 8px 8px 0;
+  font-size:16px;
+}
+hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.bullet{padding-left:18px;margin:7px 0}
+.codeblock{
+  background:var(--ground);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:14px 16px;
+  overflow-x:auto;
+  font-family:Consolas,monospace;
+  font-size:14px;
+  line-height:1.65;
+  white-space:pre;
+}
+.table-wrap{
+  overflow-x:auto;
+  margin:16px 0;
+  border:1px solid var(--line);
+  border-radius:8px;
+}
+table{
+  border-collapse:collapse;
+  font-size:15px;
+  width:100%;
+  line-height:1.65;
+}
+td,th{
+  border:1px solid var(--line);
+  padding:10px 12px;
+  text-align:left;
+  vertical-align:top;
+  min-width:105px;
+}
+th{background:var(--ground);font-weight:bold}
+code{
+  background:var(--ground);
+  padding:1px 5px;
+  border-radius:4px;
+  font-size:90%;
+  overflow-wrap:anywhere;
+}
+#quiz{
+  margin-top:52px;
+  padding-top:28px;
+  border-top:2px solid var(--line);
+}
+#quiz h2{font-size:25px;line-height:1.45;margin:0 0 8px}
+.embedded-summary{
+  margin:18px 0 24px;
+  border:1px solid var(--star-line);
+  border-radius:9px;
+  background:var(--card);
+  overflow:hidden;
+}
+.embedded-summary summary{
+  cursor:pointer;
+  padding:13px 16px;
+  background:var(--star-bg);
+  color:var(--star-ink);
+  font-weight:bold;
+  font-size:16px;
+  user-select:none;
+}
+.embedded-summary-body{
+  padding:16px 20px;
+  border-top:1px solid var(--line);
+  font-size:16px;
+}
+.embedded-summary-body h2,.embedded-summary-body h3{
+  margin-top:18px;
+}
+.topic-exam-group{
+  margin:36px 0 16px;
+  padding:18px 20px;
+  background:var(--ground);
+  border:1px solid var(--line);
+  border-left:5px solid var(--accent);
+  border-radius:8px;
+}
+.topic-exam-group h3{
+  margin:0 0 6px;
+  font-size:20px;
+}
+.topic-exam-group p{
+  margin:0 0 10px;
+  font-size:14px;
+  color:var(--muted);
+}
+.quiztools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:18px 0;
+  align-items:center;
+}
+.filter-bar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  margin:14px 0;
+  padding:11px 14px;
+  background:var(--ground);
+  border-radius:8px;
+  font-size:14px;
+}
+.question{
+  border:0;
+  border-top:1px solid var(--line);
+  margin:0;
+  padding:24px 0;
+}
+.question legend{
+  float:left;
+  width:100%;
+  font-weight:bold;
+  margin-bottom:10px;
+  line-height:1.75;
+}
+.q-meta{
+  clear:both;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  font-size:13px;
+  color:var(--muted);
+  margin:0 0 12px;
+}
+.options{
+  clear:both;
+  display:grid;
+  gap:7px;
+}
+label.opt{
+  display:flex;
+  gap:11px;
+  align-items:flex-start;
+  border:1px solid var(--line);
+  padding:11px 14px;
+  border-radius:7px;
+  cursor:pointer;
+  background:var(--paper);
+}
+label.opt:hover{background:var(--ground)}
+label.opt input{margin-top:7px;flex-shrink:0}
+label.opt:has(input:checked){
+  background:var(--selected);
+  border-color:var(--accent);
+}
+.feedback{
+  margin:12px 0 0;
+  padding:13px 16px;
+  background:var(--ground);
+  border-radius:7px;
+  border-left:4px solid var(--accent);
+  font-size:15.5px;
+}
+.feedback.incorrect{
+  background:var(--wrong-bg);
+  border-left-color:var(--wrong);
+}
+.correct-title{color:var(--accent);font-weight:bold}
+.incorrect-title{color:var(--wrong);font-weight:bold}
+#score{
+  font-size:20px;
+  font-weight:bold;
+  margin:18px 0;
+  padding:14px 18px;
+  border-radius:8px;
+  background:var(--ground);
+  border:1px solid var(--line);
+}
+.save{font-size:13px;color:var(--muted);margin-top:16px}
+#summary,#quiz{scroll-margin-top:20px}
+[hidden]{display:none!important}
+@media(max-width:820px){
+  .layout{display:block}
+  aside{position:static;max-height:none;padding:16px}
+  nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  nav button{font-size:13px;padding:9px}
+  main{border-left:0;border-top:1px solid var(--line);padding:22px 16px 50px}
+  header{padding:18px 16px}
+  body{font-size:16px}
+}
+@media print{
+  :root[data-theme]{
+    color-scheme:light;
+    --paper:#fff;
+    --ink:#17261d;
+    --muted:#415348;
+    --line:#b4bdb6;
+    --accent:#1f5c43;
+    --ground:#f0f3ef;
+    --wrong:#922f26;
+    --selected:#e5eee4;
+    --on-accent:#fff;
+  }
+  header,aside,.toolbar,.quiztools,.filter-bar,.save{display:none!important}
+  main{border:0;padding:0}
+  .layout{display:block}
+  .question{break-inside:avoid}
+  article,#quiz{max-width:none}
+  body{-webkit-print-color-adjust:economy;print-color-adjust:economy}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div>
+      <h1>553103-168 ความรู้พื้นฐานเรื่องยา (Basic Knowledge of Medications)</h1>
+      <p id="courseCount">สรุปเนื้อหาแยกแต่ละบทครบทุกสไลด์ + คลิปการสอน + จำลองข้อสอบพร้อมติดดาวเก็งข้อสอบ</p>
+    </div>
+  </div>
+  <div class="blueprint-bar" aria-label="โครงสร้างข้อสอบตามใบปะหน้า">
+    <span>📄 <strong>ใบปะหน้าข้อสอบปลายภาค:</strong> สอบวันที่ 26 ต.ค. 2569 (09.00–10.00 น. · 60 นาที)</span>
+    <span>📝 <strong>ปรนัย 36 ข้อ (36 คะแนน):</strong></span>
+    <span>• <strong>ตอนที่ 1 (ข้อ 1–24, 24 คะแนน):</strong> อ.ปัทมวรรณ (คาบ 1 ADR, คาบ 3 ทางเลือกการรักษา, คาบ 4 ยาแก้ปวดลดไข้, คาบ 6 ยาหวัด/ท้องเสีย/ท้องผูก/กระเพาะ)</span>
+    <span>• <strong>ตอนที่ 2 (ข้อ 25–36, 12 คะแนน):</strong> รศ.ดร.ภญ.ศรีสมบัติ (คาบ 2 Drug Interactions, คาบ 5 Precision Medicine)</span>
+  </div>
+</header>
+
+<div class="layout">
+  <aside>
+    <h2>เลือกบทเรียน / โหมดจำลองสอบ</h2>
+    <nav id="chapters" aria-label="บทเรียนและโหมดจำลองสอบ"></nav>
+    <p class="save" id="saveStatus">บันทึกคำตอบอัตโนมัติในเบราว์เซอร์นี้</p>
+  </aside>
+
+  <main id="main">
+    <div class="toolbar">
+      <a href="#summary" id="summaryLink">📖 ไปสรุปเนื้อหาบทนี้</a>
+      <a href="#quiz" id="quizLink">✍️ ไปแบบจำลองข้อสอบ</a>
+      <button id="viewModeBtn" type="button" aria-pressed="false">โหมดแสดงเฉพาะข้อสอบ + สรุปย่อในข้อสอบ</button>
+      <button id="themeToggle" type="button" aria-pressed="true">ธีมมืด: เปิด</button>
+      <button id="print" type="button">พิมพ์บทนี้</button>
+    </div>
+
+    <div class="star-legend">
+      <strong>ระดับดาวบอกความน่าจะออกสอบ:</strong>
+      <span class="star-badge">⭐⭐⭐ ออกสอบเน้นย้ำ</span> ประเด็นที่อาจารย์เน้นย้ำในคลิปสอน / Take Home Message / ตารางสรุปหลัก
+      <span class="star-badge">⭐⭐ มีโอกาสออกสูง</span> เนื้อหาสำคัญในสไลด์และกรณีศึกษา
+      <span class="star-badge">⭐ เก็บตกครบเนื้อหา</span> รายละเอียดเสริมให้ครอบคลุมทุกหน้าสไลด์
+    </div>
+
+    <article id="summary" tabindex="-1"></article>
+
+    <section id="quiz" tabindex="-1">
+      <h2 id="quizTitle"></h2>
+      <p id="quizDescription"></p>
+
+      <div id="embeddedChapterSummary"></div>
+
+      <div class="filter-bar">
+        <strong>กรองข้อสอบตามระดับดาว:</strong>
+        <button type="button" class="filter-btn" data-star="all" aria-pressed="true">ทั้งหมด</button>
+        <button type="button" class="filter-btn" data-star="3" aria-pressed="false">เฉพาะ ⭐⭐⭐ ออกสอบเน้น</button>
+        <button type="button" class="filter-btn" data-star="2" aria-pressed="false">⭐⭐ ขึ้นไป</button>
+      </div>
+
+      <div class="quiztools">
+        <button class="primary" id="grade" type="button">ตรวจคำตอบและสรุปคะแนนทั้งชุด</button>
+        <button id="showAllSummariesBtn" type="button">เปิด/ปิดสรุปเนื้อหาทุกเรื่องในข้อสอบ</button>
+        <button id="shuffleExamBtn" type="button" hidden>สุ่มชุดข้อสอบปลายภาค 36 ข้อใหม่</button>
+        <button id="retry" type="button">เริ่มทำบทนี้ใหม่</button>
+      </div>
+
+      <p id="progress" aria-live="polite"></p>
+      <div id="score" role="status" tabindex="-1" hidden></div>
+      <form id="questions"></form>
+
+      <div class="quiztools">
+        <button class="primary" id="gradeBottom" type="button">ตรวจคำตอบและสรุปคะแนนทั้งชุด</button>
+        <a href="#summary">↑ กลับไปอ่านสรุปเนื้อหาด้านบน</a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+'use strict';
+const DATA = /*__DATA__*/;
+const $ = id => document.getElementById(id);
+const STORAGE_KEY = 'drug-553103-study-v1';
+
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  const dark = theme === 'dark';
+  $('themeToggle').setAttribute('aria-pressed', String(dark));
+  $('themeToggle').textContent = dark ? 'ธีมมืด: เปิด' : 'ธีมมืด: ปิด';
+  try { localStorage.setItem('drug-study-theme', theme); } catch (e) {}
+}
+$('themeToggle').onclick = () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+setTheme(document.documentElement.dataset.theme);
+
+let saved = {}, storageOK = true;
+try {
+  saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+  if (!saved || typeof saved !== 'object' || Array.isArray(saved)) saved = {};
+} catch (e) { storageOK = false; }
+
+let current = DATA[0].id;
+let starFilter = 'all';
+let quizOnlyMode = false;
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[c]));
+
+function state() {
+  const s = saved[current];
+  if (!s || !Array.isArray(s.answers)) saved[current] = { answers: [], graded: false };
+  return saved[current];
+}
+
+function persist() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(saved)); } catch (e) { storageOK = false; }
+  if (!storageOK) $('saveStatus').textContent = 'เบราว์เซอร์ไม่อนุญาตให้บันทึก คำตอบจะอยู่เฉพาะหน้านี้';
+}
+
+function chapter() {
+  return DATA.find(c => c.id === current);
+}
+
+function starLabel(stars) {
+  if (stars === 3) return '⭐⭐⭐ ออกสอบเน้น';
+  if (stars === 2) return '⭐⭐ มีโอกาสออกสูง';
+  return '⭐ เก็บตกครบเนื้อหา';
+}
+
+function progress() {
+  const c = chapter(), s = state();
+  const n = s.answers.slice(0, c.questions.length).filter(x => Number.isInteger(x) && x >= 0 && x < 4).length;
+  const star3Count = c.questions.filter(q => q.stars === 3).length;
+  $('progress').textContent = `ตอบแล้ว ${n} / ${c.questions.length} ข้อ (มีข้อเก็งเน้น ⭐⭐⭐ จำนวน ${star3Count} ข้อ)`;
+}
+
+function feedback() {
+  const c = chapter(), s = state();
+  let score = 0;
+  for (let i = 0; i < c.questions.length; i++) {
+    const q = c.questions[i];
+    const answered = Number.isInteger(s.answers[i]) && s.answers[i] >= 0 && s.answers[i] < q.c.length;
+    const ok = s.answers[i] === q.a;
+    score += ok ? 1 : 0;
+    const el = $('feedback' + i);
+    if (!el) continue;
+    el.hidden = !s.graded && !answered;
+    el.className = 'feedback ' + (ok ? 'correct' : 'incorrect');
+    el.innerHTML = ok
+      ? `<span class="correct-title">✓ ตอบถูก</span> · <span class="star-badge">${starLabel(q.stars)}</span><br>${esc(q.e)}`
+      : `<span class="incorrect-title">${answered ? '✗ ตอบผิด' : '• ยังไม่ได้ตอบ'}</span> · <strong>เฉลย ${'กขคง'[q.a]}. ${esc(q.c[q.a])}</strong><br>${esc(q.e)}`;
+  }
+  const scoreEl = $('score');
+  if (s.graded) {
+    scoreEl.hidden = false;
+    scoreEl.textContent = `สรุปคะแนน: ได้ ${score} / ${c.questions.length} คะแนน (${Math.round(score / c.questions.length * 100)}%)`;
+  } else {
+    scoreEl.hidden = true;
+    scoreEl.textContent = '';
+  }
+  progress();
+}
+
+function renderQuestionCard(q, i, s) {
+  const visible = starFilter === 'all' || (starFilter === '3' && q.stars === 3) || (starFilter === '2' && q.stars >= 2);
+  return `<fieldset class="question" data-qindex="${i}" ${visible ? '' : 'hidden'}>
+    <legend><span class="star-badge">${starLabel(q.stars)}</span> ข้อที่ ${i + 1}. ${esc(q.q)}</legend>
+    <p class="q-meta"><span>📌 เรื่อง: ${esc(q.topicTitle)}</span> · <span>🔎 อ้างอิง: ${esc(q.source)}</span></p>
+    <div class="options">
+      ${q.c.map((v, j) => `<label class="opt"><input type="radio" name="q${i}" value="${j}" ${s.answers[i] === j ? 'checked' : ''}><span>${'กขคง'[j]}. ${esc(v)}</span></label>`).join('')}
+    </div>
+    <div id="feedback${i}" hidden></div>
+  </fieldset>`;
+}
+
+function render() {
+  const c = chapter(), s = state();
+  $('chapters').innerHTML = DATA.map(x => {
+    const isExam = x.id === 'exam36';
+    const label = isExam ? '🎯 จำลองสอบปลายภาคจริง (36 ข้อ)' : `คาบที่ ${Number(x.id)} · ${x.instructor}`;
+    return `<button type="button" class="${isExam ? 'exam-nav-btn' : ''}" data-chapter="${x.id}" aria-current="${x.id === current}">
+      <strong>${esc(label)}</strong>
+      <small>${esc(x.shortTitle)} · ${x.questions.length} ข้อ (⭐${x.questions.filter(q => q.stars === 3).length})</small>
+    </button>`;
+  }).join('');
+
+  $('summary').innerHTML = c.summary;
+  $('summary').hidden = quizOnlyMode;
+  $('summaryLink').hidden = quizOnlyMode;
+
+  $('quizTitle').textContent = c.id === 'exam36'
+    ? `แบบจำลองข้อสอบปลายภาคเสมือนจริง 36 ข้อ (ตามใบปะหน้า 36 คะแนน)`
+    : `แบบจำลองข้อสอบประจำคาบที่ ${Number(c.id)} · ${c.shortTitle} (${c.questions.length} ข้อ)`;
+
+  $('quizLink').textContent = `✍️ ไปข้อสอบ (${c.questions.length} ข้อ)`;
+  $('quizDescription').textContent = c.id === 'exam36'
+    ? 'จัดโครงสร้างตรงตามใบปะหน้าข้อสอบจริง: ตอนที่ 1 อ.ปัทมวรรณ 24 ข้อ (คาบ 1, 3, 4, 6 เรื่องละ 6 ข้อ) และ ตอนที่ 2 รศ.ดร.ภญ.ศรีสมบัติ 12 ข้อ (คาบ 2, 5 เรื่องละ 6 ข้อ) โดยในข้อสอบแต่ละเรื่องมีสรุปเนื้อหาของเรื่องนั้นแนบไว้ให้ทบทวนได้ทันที'
+    : 'สรุปเนื้อหาประจำเรื่องถูกแนบไว้ในแบบจำลองข้อสอบด้านล่างนี้ด้วย สามารถเปิดเทียบสรุปขณะทำข้อสอบได้ทันที เลือกคำตอบแล้วเห็นผลพร้อมคำอธิบายรายข้อ';
+
+  $('shuffleExamBtn').hidden = c.id !== 'exam36';
+
+  if (c.id !== 'exam36') {
+    $('embeddedChapterSummary').innerHTML = `
+      <details class="embedded-summary" open>
+        <summary>📌 สรุปเนื้อหาประจำเรื่อง (อยู่ในแบบจำลองข้อสอบ ${esc(c.shortTitle)}) — คลิกเพื่อย่อ/ขยาย</summary>
+        <div class="embedded-summary-body">
+          ${c.checklistHtml}
+          <details style="margin-top:12px">
+            <summary style="cursor:pointer;color:var(--accent);font-weight:bold">📖 เปิดดูสรุปเนื้อหาละเอียดทั้งหมดของเรื่องนี้ภายในหน้าข้อสอบ</summary>
+            <div style="margin-top:12px">${c.bodyHtml}</div>
+          </details>
+        </div>
+      </details>`;
+
+    $('questions').innerHTML = c.questions.map((q, i) => renderQuestionCard(q, i, s)).join('');
+  } else {
+    $('embeddedChapterSummary').innerHTML = '';
+    const groups = [];
+    let lastTopic = null;
+    c.questions.forEach((q, i) => {
+      if (q.topicId !== lastTopic) {
+        groups.push({ topicId: q.topicId, topicTitle: q.topicTitle, partLabel: q.partLabel, items: [] });
+        lastTopic = q.topicId;
+      }
+      groups[groups.length - 1].items.push({ q, i });
+    });
+
+    $('questions').innerHTML = groups.map(g => {
+      const topicChap = DATA.find(d => d.id === g.topicId);
+      return `
+        <div class="topic-exam-group">
+          <h3>${esc(g.partLabel)} · ${esc(g.topicTitle)} (${g.items.length} ข้อ)</h3>
+          <p>สรุปเนื้อหาของเรื่องนี้ถูกแนบไว้ด้านล่างเพื่อให้อ่านทบทวนคู่กับแบบจำลองข้อสอบของเรื่องนี้ได้โดยตรง</p>
+          <details class="embedded-summary" open>
+            <summary>📌 สรุปจุดเน้นออกสอบ (★★★) เรื่อง ${esc(topicChap ? topicChap.shortTitle : g.topicTitle)} — คลิกเพื่อย่อ/ขยาย</summary>
+            <div class="embedded-summary-body">
+              ${topicChap ? topicChap.checklistHtml : ''}
+              <details style="margin-top:10px">
+                <summary style="cursor:pointer;color:var(--accent);font-weight:bold">📖 เปิดดูสรุปเนื้อหาฉบับเต็มของเรื่องนี้</summary>
+                <div style="margin-top:10px">${topicChap ? topicChap.bodyHtml : ''}</div>
+              </details>
+            </div>
+          </details>
+        </div>
+        ${g.items.map(item => renderQuestionCard(item.q, item.i, s)).join('')}
+      `;
+    }).join('');
+  }
+
+  feedback();
+}
+
+$('chapters').addEventListener('click', e => {
+  const b = e.target.closest('[data-chapter]');
+  if (!b) return;
+  current = b.dataset.chapter;
+  render();
+  window.scrollTo({ top: 0 });
+});
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    starFilter = btn.dataset.star;
+    document.querySelectorAll('.filter-btn').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+    render();
+  });
+});
+
+$('viewModeBtn').onclick = () => {
+  quizOnlyMode = !quizOnlyMode;
+  $('viewModeBtn').setAttribute('aria-pressed', String(quizOnlyMode));
+  $('viewModeBtn').textContent = quizOnlyMode
+    ? 'โหมดแสดงเฉพาะข้อสอบ + สรุปย่อในข้อสอบ: เปิด'
+    : 'โหมดแสดงเฉพาะข้อสอบ + สรุปย่อในข้อสอบ';
+  render();
+};
+
+$('showAllSummariesBtn').onclick = () => {
+  const details = document.querySelectorAll('#quiz details.embedded-summary');
+  const anyClosed = Array.from(details).some(d => !d.open);
+  details.forEach(d => { d.open = anyClosed; });
+};
+
+$('shuffleExamBtn').onclick = () => {
+  const examChap = DATA.find(d => d.id === 'exam36');
+  if (!examChap) return;
+  if (state().answers.some(x => x !== null && x !== undefined) && !confirm('ต้องการสุ่มชุดข้อสอบปลายภาค 36 ข้อใหม่จากคลังข้อสอบติดดาว และล้างคำตอบของชุดนี้หรือไม่?')) return;
+  const part1Ids = ['01', '03', '04', '06'];
+  const part2Ids = ['02', '05'];
+  const pick6 = (chapId, partText) => {
+    const ch = DATA.find(d => d.id === chapId);
+    const pool = [...ch.questions].sort((a, b) => (b.stars - a.stars) || (Math.random() - 0.5));
+    const chosen = pool.slice(0, 12).sort(() => Math.random() - 0.5).slice(0, 6);
+    return chosen.map(q => Object.assign({}, q, {
+      topicId: chapId,
+      topicTitle: `คาบที่ ${Number(chapId)}: ${ch.shortTitle}`,
+      partLabel: partText
+    }));
+  };
+  examChap.questions = [
+    ...part1Ids.flatMap(id => pick6(id, 'ตอนที่ 1 (อ.ปัทมวรรณ · 24 คะแนน)')),
+    ...part2Ids.flatMap(id => pick6(id, 'ตอนที่ 2 (รศ.ดร.ภญ.ศรีสมบัติ · 12 คะแนน)'))
+  ];
+  saved['exam36'] = { answers: [], graded: false };
+  persist();
+  render();
+};
+
+$('print').onclick = () => window.print();
+
+$('questions').addEventListener('change', e => {
+  if (e.target.type !== 'radio') return;
+  const s = state();
+  s.answers[Number(e.target.name.slice(1))] = Number(e.target.value);
+  s.graded = false;
+  persist();
+  feedback();
+});
+
+$('questions').onsubmit = e => e.preventDefault();
+
+function grade() {
+  state().graded = true;
+  persist();
+  feedback();
+  $('score').focus();
+}
+$('grade').onclick = grade;
+$('gradeBottom').onclick = grade;
+
+$('retry').onclick = () => {
+  if (state().answers.some(x => x !== null && x !== undefined) && !confirm('ล้างคำตอบและคะแนนของชุดนี้เพื่อเริ่มทำใหม่หรือไม่?')) return;
+  saved[current] = { answers: [], graded: false };
+  persist();
+  render();
+};
+
+const totalChapterQs = DATA.filter(c => c.id !== 'exam36').reduce((n, c) => n + c.questions.length, 0);
+$('courseCount').textContent = `สรุปเนื้อหาแยกบท (คาบ 1–6) + สรุปแนบในข้อสอบแต่ละเรื่อง · คลังข้อสอบ ${totalChapterQs} ข้อ + โหมดจำลองสอบจริง 36 ข้อตามใบปะหน้า`;
+
+render();
+if (!storageOK) persist();
+</script>
+</body>
+</html>

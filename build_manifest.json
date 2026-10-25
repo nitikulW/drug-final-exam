@@ -1,0 +1,50 @@
+[
+  {
+    "file": "คาบ01_อาการไม่พึงประสงค์จากการใช้ยา_ADR.md",
+    "sha256": "842030c83f8e90495eacd638640584c1f992539e3bf78b290cafd8f17bf6c8ae",
+    "total": 30,
+    "stars_3": 15,
+    "stars_2": 12,
+    "stars_1": 3
+  },
+  {
+    "file": "คาบ02_อันตรกิริยาระหว่างยา_Drug_Interactions.md",
+    "sha256": "da3d8df45b71ebc4c3fbd59f253eff0a50bc39dfcbdaa87ab2735aa3e007a048",
+    "total": 30,
+    "stars_3": 23,
+    "stars_2": 7,
+    "stars_1": 0
+  },
+  {
+    "file": "คาบ03_ทางเลือกในการรักษาโรค.md",
+    "sha256": "60e9e97f3b49090c9c24c36925dae4940a1f82afe1c9293370f7860787347931",
+    "total": 30,
+    "stars_3": 15,
+    "stars_2": 13,
+    "stars_1": 2
+  },
+  {
+    "file": "คาบ04_ยาแก้ปวดและยาลดไข้ในชีวิตประจำวัน.md",
+    "sha256": "0b020de1adab2877e5b4d72c76e765d289ff427eb2b0309ec3b8d7df637709e4",
+    "total": 30,
+    "stars_3": 16,
+    "stars_2": 12,
+    "stars_1": 2
+  },
+  {
+    "file": "คาบ05_การแพทย์แม่นยำ_Precision_Medicine.md",
+    "sha256": "9e3bf83de83ff3a29d8a443f95f08075a2bcb01b905217271dcae4979de93dfd",
+    "total": 30,
+    "stars_3": 21,
+    "stars_2": 9,
+    "stars_1": 0
+  },
+  {
+    "file": "คาบ06_ยารักษาอาการหวัด_ท้องเสีย_ท้องผูก_และโรคกระเพาะอาหาร.md",
+    "sha256": "92e69414aad334afb356dcbb7c696ffd79996919a4100e890f5a4f9603a5f7bf",
+    "total": 30,
+    "stars_3": 24,
+    "stars_2": 6,
+    "stars_1": 0
+  }
+]
